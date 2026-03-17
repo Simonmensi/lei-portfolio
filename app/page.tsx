@@ -1,87 +1,88 @@
-import Link from 'next/link';
-
 /**
- * Home Page
- * Landing page with hero section and quick introduction
+ * Home Page - Redesigned
+ * Landing page with gradient hero section, stat cards with icons, and featured work
  */
 export default function Home() {
   return (
-    <div className="container-custom py-20 space-y-20">
-      {/* Hero Section */}
-      <section className="space-y-8 pt-12">
-        <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-light-text dark:text-dark-text leading-tight">
+    <div className="w-full">
+      {/* Hero Section with Vertical Gradient */}
+      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary-600 to-light-bg dark:from-primary-600 dark:to-dark-bg">
+        <div className="container-custom flex flex-col items-center justify-center min-h-[600px] text-center">
+          {/* Name - Large Typography */}
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tighter">
             Lei Nuozhen
           </h1>
-          <p className="text-2xl text-primary-600 dark:text-accent-400 font-semibold">
+
+          {/* Subtitle */}
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-8">
             Systems Analyst & Data Science Practitioner
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl leading-relaxed">
+
+          {/* Description - Simplified to 1-2 sentences */}
+          <p className="text-lg md:text-xl text-white opacity-95 max-w-2xl leading-relaxed">
             Aspiring technology professional with a passion for bridging software engineering and data insights.
-            Currently pursuing a Graduate Diploma in Systems Analysis at NUS-ISS, backed by a Computer Science degree
-            from Macau University of Science and Technology.
-          </p>
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4 pt-6">
-          <Link
-            href="/lei-portfolio/projects"
-            className="btn-primary"
-          >
-            View My Projects
-          </Link>
-          <Link
-            href="/lei-portfolio/about"
-            className="btn-secondary"
-          >
-            Learn More About Me
-          </Link>
-        </div>
-      </section>
-
-      {/* Quick Stats */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="card p-6 space-y-2">
-          <p className="text-3xl font-bold text-primary-600 dark:text-accent-400">5+</p>
-          <p className="text-gray-600 dark:text-gray-400">Projects Completed</p>
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            Full-stack applications and system designs
-          </p>
-        </div>
-
-        <div className="card p-6 space-y-2">
-          <p className="text-3xl font-bold text-primary-600 dark:text-accent-400">2</p>
-          <p className="text-gray-600 dark:text-gray-400">Years Experience</p>
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            IBM & Ipsos data science roles
-          </p>
-        </div>
-
-        <div className="card p-6 space-y-2">
-          <p className="text-3xl font-bold text-primary-600 dark:text-accent-400">8+</p>
-          <p className="text-gray-600 dark:text-gray-400">Technical Skills</p>
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            Languages, frameworks, and tools
           </p>
         </div>
       </section>
 
-      {/* Featured Section */}
-      <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-light-text dark:text-dark-text">
-          Featured Work
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 max-w-2xl">
-          I specialize in full-stack development, system analysis, and data science.
-          My recent projects showcase expertise in Java Spring Boot, React.js, and complex business logic implementation.
-        </p>
-        <Link
-          href="/lei-portfolio/projects"
-          className="inline-flex items-center gap-2 text-primary-600 dark:text-accent-400 hover:text-primary-800 dark:hover:text-accent-500 font-semibold transition-colors"
-        >
-          Explore All Projects →
-        </Link>
+      {/* Three Stat Cards Section - Single Column */}
+      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-bg">
+        <div className="container-custom max-w-3xl mx-auto flex flex-col gap-8">
+          {/* Card 1: Projects Completed */}
+          <div className="card p-12 flex flex-col items-center justify-center min-h-80">
+            <div className="text-6xl mb-6">💻</div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center">
+              Projects Completed
+            </h3>
+            <p className="text-5xl font-bold text-primary-600 dark:text-accent-400 mb-6">
+              5+
+            </p>
+            <p className="text-base text-gray-600 dark:text-gray-400 text-center leading-relaxed">
+              Full-stack applications and system designs
+            </p>
+          </div>
+
+          {/* Card 2: Full-Stack Experience */}
+          <div className="card p-12 flex flex-col items-center justify-center min-h-80">
+            <div className="text-6xl mb-6">🤖</div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-8 text-center">
+              Full-Stack Application Design
+            </h3>
+            <p className="text-base text-gray-600 dark:text-gray-400 text-center leading-relaxed">
+              Full-stack applications and system designs
+            </p>
+          </div>
+
+          {/* Card 3: Years of Experience */}
+          <div className="card p-12 flex flex-col items-center justify-center min-h-80">
+            <div className="text-6xl mb-6">📊</div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4 text-center">
+              Data Science Experience
+            </h3>
+            <p className="text-5xl font-bold text-primary-600 dark:text-accent-400 mb-6">
+              2
+            </p>
+            <p className="text-base text-gray-600 dark:text-gray-400 text-center leading-relaxed">
+              Data science roles at IBM and Ipsos
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Work Section - Static (No Links) */}
+      <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-bg">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-6">
+            Featured Work
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+            I specialize in full-stack development, system analysis, and data science.
+            My recent projects showcase expertise in Java Spring Boot, React.js, and complex business logic implementation.
+          </p>
+          <span className="inline-block text-lg font-semibold text-primary-600 dark:text-accent-400 cursor-default">
+            Explore All Projects
+          </span>
+        </div>
       </section>
     </div>
   );
